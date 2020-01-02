@@ -1,0 +1,12 @@
+Steps:
+
+1. mysql --user=root --password=root
+2. show databases;
+3. create database tutorialdb;
+4. use tutorialdb
+5. create table tutorials_tbl (id INT(6) unsigned auto_increment primary key,
+    tutorial_title varchar(30),
+    tutorial_author varchar(30),
+    submission_date TIMESTAMP
+    );
+6. insert into tutorials_tbl (tutorial_title, tutorial_author, submission_date) values ("Simple DB","Naveen K Reddy",NOW());
