@@ -28,7 +28,7 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
         <logger message="Result set #[message.payload]" level="INFO" doc:name="Logger"/>
     </flow>
     <flow name="simpletransactionFlow1">
-        <http:listener config-ref="HTTP_Listener_Configuration" path="/transaction/*" doc:name="HTTP"/>
+
         <logger message="Sent Message to JMS Q in Flow1 #[message.payloadAs(java.lang.String)] and Message Id is #[message.id]" level="INFO" doc:name="Logger"/>
         <message-properties-transformer doc:name="Message Properties" scope="invocation">
 
