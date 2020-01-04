@@ -29,7 +29,7 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
     </flow>
     <flow name="simpletransactionFlow1">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/transaction/*" doc:name="HTTP"/>
-        <logger message="Sent Message to JMS Q in Flow1 #[message.payloadAs(java.lang.String)] and Message Id is #[message.id]" level="INFO" doc:name="Logger"/>
+        <logger message="This is simple transacaton example" level="INFO" doc:name="Logger"/>
         <message-properties-transformer doc:name="Message Properties" scope="invocation">
 
             <add-message-property key="title" value="#[message.inboundProperties['http.query.params'].title]"/>
