@@ -23,7 +23,7 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
 
 
         </db:insert>
-        <logger message="db response #[dw('payload')]" level="INFO" doc:name="Logger"/>
+        <logger message="db response&gt;&gt;&gt;&gt;&gt;&gt; #[dw('payload')]" level="INFO" doc:name="Logger"/>
         <json:object-to-json-transformer doc:name="Object to JSON"/>
         <logger message="Result set #[message.payload]" level="INFO" doc:name="Logger"/>
     </flow>
