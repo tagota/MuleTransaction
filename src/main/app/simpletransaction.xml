@@ -37,7 +37,6 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
             <add-message-property key="title" value="#[message.inboundProperties['http.query.params'].title]"/>
             <add-message-property key="author" value="#[message.inboundProperties['http.query.params'].author]"/>
         </message-properties-transformer>
-        <logger message="loggar after message properties #[payload]" level="INFO" doc:name="Logger"/>
         <flow-ref name="simpletransactionFlow2" doc:name="Flow Reference"/>
 
         <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
